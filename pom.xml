@@ -29,7 +29,9 @@
         <jooq.version>3.9.1</jooq.version>
 
         <commons.fileupload.version>1.3.1</commons.fileupload.version>
-        <freemarker.version>2.3.16</freemarker.version>
+
+        <lombok.version>1.16.12.0</lombok.version>
+        <mapstruct.version>1.2.0.Beta1</mapstruct.version>
 
         <!-- Tests -->
         <rest-assured.version>2.9.0</rest-assured.version>
@@ -53,12 +55,23 @@
                 <version>${google-jsr305.version}</version>
             </dependency>
 
-            <!-- logs facade -->
+
+            <!-- language extensions -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j-api.version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-jdk8</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
 
             <!-- configuration management -->
