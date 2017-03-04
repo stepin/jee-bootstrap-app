@@ -18,21 +18,22 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <javaee-api.version>7.0</javaee-api.version>
-        <google-jsr305.version>3.0.1</google-jsr305.version>
+        <!-- language extensions -->
         <slf4j-api.version>1.7.13</slf4j-api.version>
-
-        <archaius.version>0.6.0</archaius.version>
-        <feign.version>8.11.0</feign.version>
-
-        <freemarker.version>2.3.20</freemarker.version>
-        <jooq.version>3.9.1</jooq.version>
-        <spring-data-jpa.version>1.11.1.RELEASE</spring-data-jpa.version>
-
-        <commons.fileupload.version>1.3.1</commons.fileupload.version>
-
         <lombok.version>1.16.12.0</lombok.version>
         <mapstruct.version>1.2.0.Beta1</mapstruct.version>
+
+        <javaee-api.version>7.0</javaee-api.version>
+
+        <!-- JEE7 APIs extensions -->
+        <spring-data-jpa.version>1.11.1.RELEASE</spring-data-jpa.version>
+        <jooq.version>3.9.1</jooq.version>
+        <freemarker.version>2.3.20</freemarker.version>
+        <commons.fileupload.version>1.3.1</commons.fileupload.version>
+
+        <!-- cloud, optional -->
+        <archaius.version>0.6.0</archaius.version>
+        <feign.version>8.11.0</feign.version>
 
         <!-- Tests -->
         <rest-assured.version>2.9.0</rest-assured.version>
@@ -42,21 +43,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>javax</groupId>
-                <artifactId>javaee-api</artifactId>
-                <version>${javaee-api.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <!-- Google's @Nullable annotations -->
-            <dependency>
-                <groupId>com.google.code.findbugs</groupId>
-                <artifactId>jsr305</artifactId>
-                <version>${google-jsr305.version}</version>
-            </dependency>
-
-
             <!-- language extensions -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -75,11 +61,11 @@
                 <version>${mapstruct.version}</version>
             </dependency>
 
-            <!-- cloud: configuration management, optional -->
             <dependency>
-                <groupId>com.netflix.archaius</groupId>
-                <artifactId>archaius-core</artifactId>
-                <version>${archaius.version}</version>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javaee-api.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <!-- JEE7 APIs extensions -->
@@ -99,6 +85,12 @@
                 <version>${freemarker.version}</version>
             </dependency>
 
+            <!-- cloud: configuration management, optional -->
+            <dependency>
+                <groupId>com.netflix.archaius</groupId>
+                <artifactId>archaius-core</artifactId>
+                <version>${archaius.version}</version>
+            </dependency>
 
             <!-- tests -->
             <dependency>

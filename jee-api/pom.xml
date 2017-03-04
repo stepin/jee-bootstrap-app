@@ -11,19 +11,10 @@
     <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-        </dependency>
-
         <!-- language extensions -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.findbugs</groupId>
-            <artifactId>jsr305</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -32,6 +23,11 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-jdk8</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
         </dependency>
 
         <!-- JEE7 APIs extensions -->
