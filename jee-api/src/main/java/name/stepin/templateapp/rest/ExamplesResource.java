@@ -10,10 +10,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import java.util.Arrays;
+import javax.ws.rs.*;
 import java.util.Collections;
 import java.util.List;
 
@@ -30,13 +27,42 @@ public class ExamplesResource {
     private FlashStore flashStore;
 
     @GET
-    public List<ExampleDTO> list() {
+    @Path("new")
+    public String newForm() {
+        return "";
+    }
+
+    @POST
+    public void create(@Valid @NotNull ExampleDTO exampleDTO) {
+
+    }
+
+    @GET
+    public List<ExampleDTO> index() {
         return Collections.singletonList(exampleService.example());
     }
 
     @GET
-    @Path("")
-    public ExampleDTO show(@Valid @NotNull Integer id) {
+    @Path("{id}/edit")
+    public String editForm(@PathParam("id") Integer id) {
+        return "";
+    }
+
+    @POST
+    @Path("{id}")
+    public ExampleDTO update(@PathParam("id") Integer id, @Valid @NotNull ExampleDTO exampleDTO) {
+        return exampleService.example();
+    }
+
+    @GET
+    @Path("{id}")
+    public ExampleDTO show(@PathParam("id") Integer id) {
+        return exampleService.example();
+    }
+
+    @DELETE
+    @Path("{id}")
+    public ExampleDTO delete(@PathParam("id") Integer id) {
         return exampleService.example();
     }
 }
