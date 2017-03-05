@@ -3,6 +3,7 @@ package name.stepin.templateapp.rest;
 import lombok.extern.slf4j.Slf4j;
 import name.stepin.templateapp.domain.ExampleService;
 import name.stepin.templateapp.rest.vo.ExampleDTO;
+import name.stepin.templateapp.utils.FlashStore;
 import name.stepin.templateapp.utils.MediaTypeUtf8;
 
 import javax.ejb.EJB;
@@ -24,6 +25,9 @@ public class ExamplesResource {
 
     @EJB
     private ExampleService exampleService;
+
+    @EJB
+    private FlashStore flashStore;
 
     @GET
     public List<ExampleDTO> list() {
