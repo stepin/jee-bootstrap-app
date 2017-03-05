@@ -14,11 +14,14 @@ import javax.ws.rs.*;
 import java.util.Collections;
 import java.util.List;
 
-@Path("examples")
+/**
+ * Old-style HTML CRUD. Should be used only for internal admin ui.
+ */
+@Path("examplesCrud")
 @Stateless
 @Slf4j
 @Produces({MediaTypeUtf8.APPLICATION_JSON, MediaTypeUtf8.APPLICATION_XML})
-public class ExamplesResource {
+public class ExamplesCrudResource {
 
     @EJB
     private ExampleService exampleService;

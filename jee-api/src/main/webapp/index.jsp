@@ -1,1 +1,1 @@
-<% response.sendRedirect("rest/examples"); %>
+<% response.sendRedirect("rest/examplesCrud"); %>
