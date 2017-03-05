@@ -37,7 +37,7 @@
 
         <!-- Tests -->
         <rest-assured.version>2.9.0</rest-assured.version>
-        <testng.version>6.9.13.4</testng.version>
+        <testng.version>6.11</testng.version>
         <mockito.version>2.7.11</mockito.version>
     </properties>
 
@@ -54,11 +54,18 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-jdk8</artifactId>
                 <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
