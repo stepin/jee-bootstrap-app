@@ -1,4 +1,4 @@
-package com.airhacks.example;
+package name.stepin.templateapp.example;
 
 import lombok.extern.slf4j.Slf4j;
 

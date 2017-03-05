@@ -1,4 +1,4 @@
-package com.airhacks.example;
+package name.stepin.templateapp.example;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
