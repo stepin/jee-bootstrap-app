@@ -2,4 +2,4 @@
 set -e
 cd "$(dirname "$0")"
 
-mvn clean install -e
+./mvnw -e clean package

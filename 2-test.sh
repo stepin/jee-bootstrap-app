@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-mvn clean test sonar:sonar
+set -e
+cd "$(dirname "$0")"
+
+./mvnw -e clean test sonar:sonar
