@@ -1,5 +1,8 @@
 package name.stepin.templateapp.example;
 
+import name.stepin.templateapp.mapper.ExampleMapper;
+import name.stepin.templateapp.rest.vo.ExampleDTO;
+import name.stepin.templateapp.rest.vo.ExampleDTO2;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;

@@ -1,5 +1,7 @@
-package name.stepin.templateapp.example;
+package name.stepin.templateapp.mapper;
 
+import name.stepin.templateapp.rest.vo.ExampleDTO;
+import name.stepin.templateapp.rest.vo.ExampleDTO2;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

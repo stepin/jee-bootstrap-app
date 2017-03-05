@@ -1,4 +1,4 @@
-package name.stepin.templateapp.example;
+package name.stepin.templateapp.rest.vo;
 
 import lombok.Data;
 
